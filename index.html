@@ -1,0 +1,52 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div id="link">
+        You're looking at a mzcore
+        <br> version of <a href="https://dbmonster.firebaseapp.com/">DBMonster</a>.
+        <br>
+        <a class="center" href="https://github.com/menduz/mzcore-dbmonster">See it on GitHub</a>
+    </div>
+
+    <div id="body">
+    </div>
+
+    <script src="underscore-min.js"></script>
+    <script src="memory-stats.js"></script>
+    <script src="monitor.js"></script>
+    <script src="junkola-copied-from-ember.js"></script>
+    <script src="mzcore/jquery.js"></script>
+    <script src="mzcore/mz.js"></script>
+    <script src="index.js"></script>
+
+    <script type="text/javascript">
+        var ROWS = 100;
+        var TIMEOUT = 0;
+            
+        $(function(){
+        
+
+            
+
+            var Instance = new DBMonster();
+
+            
+
+            function redraw() {
+                Instance.db_data = getDatabases();
+                Monitoring.renderRate.ping();
+                setTimeout(redraw, TIMEOUT);
+            }
+            redraw();
+        })
+    </script>
+
+</body>
+
+</html>
