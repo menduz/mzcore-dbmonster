@@ -9,6 +9,6 @@ Simple in-browser performance stress test for mzcore.
 
 **in the following set mutations to 100% to benchmark against mzcore's example:**
 
-[React test](http://mathieuancelin.github.io/js-repaint-perfs/react/opt.html) 
+[React test](http://mathieuancelin.github.io/js-repaint-perfs/react/opt.html)  
 [Angular 1 test](http://mathieuancelin.github.io/js-repaint-perfs/angular/)  
 [Angular 2 test](http://mathieuancelin.github.io/js-repaint-perfs/angular2/)  
