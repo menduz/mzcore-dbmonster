@@ -39,8 +39,8 @@
             
 
             function redraw() {
-                Instance.db_data = getDatabases();
-                Monitoring.renderRate.ping();
+                Instance.setData(getDatabases());
+                try {Monitoring.renderRate.ping();} catch(e) {}
                 setTimeout(redraw, TIMEOUT);
             }
             redraw();
